@@ -3,7 +3,7 @@
 Projeto para subir um identity manager com docker compose
 
 
-version: '2'
+``version: '2'
 services:
   keycloak:
     image: jboss/keycloak:10.0.0
@@ -29,4 +29,5 @@ services:
       - 9080:9080
       - 9443:9443
       - 10990:10990
+      ``
 
