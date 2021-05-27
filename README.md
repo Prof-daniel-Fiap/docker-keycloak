@@ -42,6 +42,16 @@ services:
       - 9443:9443
       - 10990:10990
  ```
+ 
+ 
+## Subir container keycloak (docker compose)
+
+```
+docker-compose up -d
+docker-compose stop
+docker ps
+```
+
 
 ## Configuração do nginx
 
