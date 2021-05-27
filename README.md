@@ -31,3 +31,12 @@ services:
       - 10990:10990
  ```
 
+## configuração do nginx
+
+```
+location /some/path/ {
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_pass http://localhost:8000;
+}
+````
