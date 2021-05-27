@@ -7,7 +7,7 @@
  sudo sh get-docker.sh   
 ```
 
-## Instalar docker compose
+## Instalação docker compose
 ```
 sudo apt-get install docker-compose
 ```
@@ -43,12 +43,19 @@ services:
       - 10990:10990
  ```
 
-## configuração do nginx
+## Configuração do nginx
+
+Instalar o nginx no ubuntu:
+```
+sudo apt-get install nginx
+```
+
+Mudar a configuração do nginx /etc/nginx/conf.d/default.conf
 
 ```
 location /some/path/ {
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
-    proxy_pass http://localhost:8000;
+    proxy_pass http://ip-docker:9080;
 }
 ````
