@@ -56,6 +56,11 @@ docker-compose stop
 docker ps
 ```
 
+## configurar dominio gratis no noip apontando ip publico ec2
+
+Cadastre-se em:
+https://www.noip.com/login?ref_url=console
+
 
 ## Configuração do nginx
 
