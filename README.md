@@ -69,7 +69,16 @@ Instalar o nginx no ubuntu:
 sudo apt-get install nginx
 ```
 
-Mudar a configuração do nginx /etc/nginx/sites-enabled/default
+
+Obter IP do docker:
+
+```
+sudo apt install net-tools
+ifconfig
+```
+
+ Mudar a configuração do nginx /etc/nginx/sites-enabled/default
+
 
 ```
 location /some/path/ {
@@ -78,3 +87,18 @@ location /some/path/ {
     proxy_pass http://ip-docker:9080;
 }
 ````
+
+Instalar certbot:
+
+https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx.html
+
+```
+sudo snap install core; 
+sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+Criar certificado no nginx:
+```
+sudo certbot --nginx
+```
