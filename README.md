@@ -69,7 +69,7 @@ Instalar o nginx no ubuntu:
 sudo apt-get install nginx
 ```
 
-Mudar a configuração do nginx /etc/nginx/conf.d/default.conf
+Mudar a configuração do nginx /etc/nginx/sites-enabled/default
 
 ```
 location /some/path/ {
