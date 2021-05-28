@@ -6,6 +6,10 @@
  curl -fsSL https://get.docker.com -o get-docker.sh
  sudo sh get-docker.sh   
 ```
+reinicia terminal
+```
+sudo usermod -a -G docker ubuntu
+```
 
 ## Instalação docker compose
 ```
