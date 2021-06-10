@@ -81,11 +81,22 @@ ifconfig
 
 
 ```
-location /some/path/ {
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_pass http://ip-docker:9080;
-}
+server_name XXXXXXXXX; # obter do NO-IP
+
+
+
+
+    location /auth {
+      proxy_pass http://localhost:9080;
+
+
+        proxy_set_header X-Forwarded-For $proxy_protocol_addr; # To forward the original client's IP address
+        proxy_set_header X-Forwarded-Proto $scheme; # to forward the  original protocol (HTTP or HTTPS)
+        proxy_set_header Host $host; # to forward the original host requested by the client
+
+    }
+
+
 ````
 
 Instalar certbot:
